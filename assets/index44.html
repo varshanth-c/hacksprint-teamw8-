@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles44.css">
+  <title>Display Input Data</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Input Data:</h2>
+    <div class="input-display">
+      <p><strong>Name:</strong> <span id="name"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <!-- Add more fields as needed -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Replace the values below with the actual input data
+    document.getElementById('name').innerText = 'John Doe';
+    document.getElementById('email').innerText = 'john.doe@example.com';
+    // Add more lines for additional input fields if needed
+  });
+
+</body>
+</html>

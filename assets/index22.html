@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses Completion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .courses-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 80px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      text-align: center;
+    }
+
+    .course {
+      display: flex;
+      justify-content:
+       space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .completed {
+      color: #76b2c5;
+    }
+
+    .course input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="courses-container">
+    <div class="course">
+     <h1> <label for="course1">Introduction to HTML</label></h1>
+     <a href = "https://www.scribd.com/document/355053670/HTML-exam">1</a><input type="checkbox" id="course1" class="completed">
+        
+    </div>
+    <div class="course">
+     <h1> <label for="course2">CSS Basics</label></h1>
+     <a href = "https://drive.google.com/drive/folders/1X0VO6sJWfnF9nQBolk5rMJTMGpGnq44c">        2</a>
+      <input type="checkbox" id="course2">
+    </div>
+    <div class="course">
+    <h1><label for="course3">JavaScript Fundamentals</label></h1>
+    <a href = "https://drive.google.com/drive/folders/1X0VO6sJWfnF9nQBolk5rMJTMGpGnq44c">3</a>
+      <input type="checkbox" id="course3">
+    </div>
+    <!-- Add more courses as needed -->
+    <a href = "index222.html">
+        <h1><button>Get Reward</button></h1>
+          </a>
+          
+  </div>
+  
+
+  <script>
+    function showCompletion() {
+      const checkboxes = document.querySelectorAll('.course input');
+      checkboxes.forEach(checkbox => {
+        const courseName = checkbox.previousElementSibling.textContent;
+        const status = checkbox.checked ? 'completed' : 'incomplete';
+        console.log('${courseName}: ${status}');
+      });
+    }
+  </script>
+
+</body>
+</html>
